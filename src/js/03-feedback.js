@@ -1,3 +1,4 @@
+import throttle from "lodash.throttle";
 const formRef = document.querySelector(".feedback-form")
 
 const toSave = { email: "", message: "" };
@@ -30,5 +31,5 @@ function submitFn(eve) {
     console.log(toSave)
 }
 
-formRef.addEventListener("input", inputEmail)
+formRef.addEventListener("input", throttle(inputEmail, 3000))
 formRef.addEventListener("submit", submitFn)
