@@ -31,5 +31,5 @@ function submitFn(eve) {
     console.log(toSave)
 }
 
-formRef.addEventListener("input", throttle(inputEmail, 3000))
+formRef.addEventListener("input", throttle(inputEmail, 500))
 formRef.addEventListener("submit", submitFn)
